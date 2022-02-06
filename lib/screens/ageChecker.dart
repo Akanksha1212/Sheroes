@@ -99,7 +99,8 @@ class _AgeCheckerState extends State<AgeChecker> {
                                     height: 10,
                                   ),
                                   CustomButton2(
-                                      name: "Children", nextPath: "/home")
+                                      name: "Children",
+                                      nextPath: "/childNavBar")
                                 ],
                               ),
                               Column(
@@ -113,7 +114,7 @@ class _AgeCheckerState extends State<AgeChecker> {
                                     height: 10,
                                   ),
                                   CustomButton2(
-                                      name: "Teens", nextPath: "/home")
+                                      name: "Teens", nextPath: "/teenhome")
                                 ],
                               ),
                             ],
@@ -135,7 +136,7 @@ class _AgeCheckerState extends State<AgeChecker> {
                                     height: 10,
                                   ),
                                   CustomButton2(
-                                      name: "Adult", nextPath: "/home")
+                                      name: "Adult", nextPath: "/adulthome")
                                 ],
                               ),
                             ],

@@ -9,14 +9,14 @@ import 'package:hackviolet/componenets.dart';
 
 // Access current battery health - Android
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class AdultHome extends StatefulWidget {
+  const AdultHome({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  _AdultHomeState createState() => _AdultHomeState();
 }
 
-class _HomeState extends State<Home> {
+class _AdultHomeState extends State<AdultHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

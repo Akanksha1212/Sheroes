@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hackviolet/screens/ageChecker.dart';
 import 'package:hackviolet/screens/chat.dart';
-import 'package:hackviolet/screens/home.dart';
+import 'package:hackviolet/screens/adult/adult_home.dart';
+import 'package:hackviolet/screens/child/childNavBar.dart';
+import 'package:hackviolet/screens/child/child_home.dart';
+import 'package:hackviolet/screens/child/nono.dart';
+import 'package:hackviolet/screens/child/storyTime.dart';
 import 'package:hackviolet/screens/onboarding.dart';
 import 'package:hackviolet/screens/rootPage.dart';
 import 'package:hackviolet/screens/sosMode.dart';
+import 'package:hackviolet/screens/teen/teen_home.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -13,18 +18,28 @@ void main() {
       switch (settings.name) {
         case '/':
           return MaterialPageRoute(builder: (context) => MyApp());
-        case '/home':
-          return MaterialPageRoute(builder: (context) => Home());
+        case '/adulthome':
+          return MaterialPageRoute(builder: (context) => AdultHome());
+        case '/teenhome':
+          return MaterialPageRoute(builder: (context) => TeenHome());
+        case '/childhome':
+          return MaterialPageRoute(builder: (context) => ChildHome());
         case '/onboarding':
           return MaterialPageRoute(builder: (context) => OnBoardingPage());
         case '/ageChecker':
           return MaterialPageRoute(builder: (context) => AgeChecker());
         case '/rootPage':
           return MaterialPageRoute(builder: (context) => RootPage());
+        case '/childNavBar':
+          return MaterialPageRoute(builder: (context) => ChildNavBar());
         case '/sosMode':
           return MaterialPageRoute(builder: (context) => SOSMode());
+        case '/story':
+          return MaterialPageRoute(builder: (context) => StoryTime());
         case '/chat':
           return MaterialPageRoute(builder: (context) => ChatWidget());
+        case '/nono':
+          return MaterialPageRoute(builder: (context) => NonoSqare());
       }
     },
     debugShowCheckedModeBanner: false,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hackviolet/componenets.dart';
 import 'package:hackviolet/screens/ageChecker.dart';
-import 'package:hackviolet/screens/home.dart';
+import 'package:hackviolet/screens/adult_home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class OnBoardingPage extends StatefulWidget {

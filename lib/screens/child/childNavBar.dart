@@ -6,14 +6,14 @@ import 'package:hackviolet/screens/chat.dart';
 import 'package:hackviolet/screens/adult_home.dart';
 import 'package:hackviolet/screens/child/child_home.dart';
 
-class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
+class ChildNavBar extends StatefulWidget {
+  const ChildNavBar({Key? key}) : super(key: key);
 
   @override
-  _RootPageState createState() => _RootPageState();
+  _ChildNavBarState createState() => _ChildNavBarState();
 }
 
-class _RootPageState extends State<RootPage> {
+class _ChildNavBarState extends State<ChildNavBar> {
   int _currentIndex = 0;
 
   @override
@@ -60,8 +60,8 @@ class _RootPageState extends State<RootPage> {
           BottomNavBarItem(
             title: 'Community',
             icon: const Icon(Icons.chat_bubble_outline),
-            activeColor: Color(0xff6C6CEA),
-            inactiveColor: Color(0xff6C6CEA),
+            activeColor: Color(0xffEEE6F3),
+            inactiveColor: Color(0xffEEE6F3),
             activeBackgroundColor: Color(0xffEEE6F3),
             inactiveBackgroundColor: Color(0xffEEE6F3),
           ),
