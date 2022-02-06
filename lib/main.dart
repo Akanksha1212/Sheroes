@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackviolet/screens/home.dart';
+import 'package:hackviolet/screens/onboarding.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -10,6 +11,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => MyApp());
         case '/home':
           return MaterialPageRoute(builder: (context) => Home());
+        case '/onboarding':
+          return MaterialPageRoute(builder: (context) => OnBoardingPage());
       }
     },
     debugShowCheckedModeBanner: false,
@@ -28,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     Future.delayed(
       Duration(seconds: 4),
-      () => Navigator.pushReplacementNamed(context, '/home'),
+      () => Navigator.pushReplacementNamed(context, '/onboarding'),
     );
   }
 
