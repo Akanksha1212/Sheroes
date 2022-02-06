@@ -163,7 +163,7 @@ class _AgeCheckerState extends State<AgeChecker> {
                           SizedBox(
                             height: 10,
                           ),
-                          CustomButton(name: "Submit", nextPath: "/home")
+                          CustomButton(name: "Submit", nextPath: "/rootPage")
                         ],
                       ),
                     ),

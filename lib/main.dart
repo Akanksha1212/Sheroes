@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hackviolet/screens/ageChecker.dart';
 import 'package:hackviolet/screens/home.dart';
 import 'package:hackviolet/screens/onboarding.dart';
+import 'package:hackviolet/screens/rootPage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,6 +17,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => OnBoardingPage());
         case '/ageChecker':
           return MaterialPageRoute(builder: (context) => AgeChecker());
+        case '/rootPage':
+          return MaterialPageRoute(builder: (context) => RootPage());
       }
     },
     debugShowCheckedModeBanner: false,
