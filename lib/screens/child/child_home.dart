@@ -181,7 +181,7 @@ class _ChildHomeState extends State<ChildHome> {
                                   ),
                                   CustomButton2(
                                     name: "Activate",
-                                    nextPath: "/sosMode",
+                                    nextPath: "/childHome",
                                   ),
                                 ],
                               ),

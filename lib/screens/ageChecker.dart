@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hackviolet/componenets.dart';
+import 'package:hackviolet/screens/adult/adultNavBar.dart';
+import 'package:hackviolet/screens/child/childNavBar.dart';
+import 'package:hackviolet/screens/teen/teenNavBar.dart';
 
 class AgeChecker extends StatefulWidget {
   const AgeChecker({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class AgeChecker extends StatefulWidget {
 }
 
 class _AgeCheckerState extends State<AgeChecker> {
+  int age = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,9 +102,38 @@ class _AgeCheckerState extends State<AgeChecker> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  CustomButton2(
-                                      name: "Children",
-                                      nextPath: "/childNavBar")
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width / 3,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(20),
+                                      ),
+                                      color: Color(0xffC1A4FF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: GestureDetector(
+                                        child: Center(
+                                          child: Text(
+                                            'Children',
+                                            style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            age = 5;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                               Column(
@@ -113,8 +146,38 @@ class _AgeCheckerState extends State<AgeChecker> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  CustomButton2(
-                                      name: "Teens", nextPath: "/teenNavBar")
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width / 3,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(20),
+                                      ),
+                                      color: Color(0xffC1A4FF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: GestureDetector(
+                                        child: Center(
+                                          child: Text(
+                                            'Teen',
+                                            style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            age = 15;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
@@ -135,8 +198,38 @@ class _AgeCheckerState extends State<AgeChecker> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  CustomButton2(
-                                      name: "Adult", nextPath: "/adultNavBar")
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width / 3,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                        Radius.circular(20),
+                                      ),
+                                      color: Color(0xffC1A4FF),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: GestureDetector(
+                                        child: Center(
+                                          child: Text(
+                                            'Adult',
+                                            style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        onTap: () {
+                                          setState(() {
+                                            age = 20;
+                                          });
+                                        },
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
@@ -164,7 +257,65 @@ class _AgeCheckerState extends State<AgeChecker> {
                           SizedBox(
                             height: 10,
                           ),
-                          CustomButton(name: "Submit", nextPath: "/adultNavBar")
+                          Container(
+                            width: MediaQuery.of(context).size.width / 1.8,
+                            height: 60,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30),
+                              ),
+                              color: Color(0xff6C6CEA),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: GestureDetector(
+                                child: Center(
+                                  child: Text(
+                                    'Submit',
+                                    style: GoogleFonts.bowlbyOne(
+                                      textStyle: TextStyle(
+                                          color: Colors.white, fontSize: 25),
+                                    ),
+                                  ),
+                                ),
+                                onTap: () {
+                                  if (age == 5) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChildNavBar()),
+                                    );
+                                    setState(() {
+                                      age = 0;
+                                    });
+                                  }
+                                  if (age == 15) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const TeenNavBar()),
+                                    );
+                                    setState(() {
+                                      age = 0;
+                                    });
+                                  }
+                                  if (age == 20) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const AdultNavBar()),
+                                    );
+                                    setState(() {
+                                      age = 0;
+                                    });
+                                  }
+                                },
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -182,12 +333,7 @@ class _AgeCheckerState extends State<AgeChecker> {
                   textStyle: TextStyle(color: Color(0xffC1A4FF), fontSize: 15),
                 ),
               ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AgeChecker()),
-                );
-              },
+              onTap: () {},
             )
           ],
         ),

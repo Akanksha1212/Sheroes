@@ -208,7 +208,7 @@ class _SOSModeState extends State<SOSMode> {
                               groupValue: val,
                               onChanged: (value) {
                                 setState(() {
-                                  val = 0;
+                                  val = 1;
                                 });
                               },
                               activeColor: Color(0xffC1A4FF),
@@ -239,7 +239,7 @@ class _SOSModeState extends State<SOSMode> {
                                         groupValue: val,
                                         onChanged: (value) {
                                           setState(() {
-                                            val = 0;
+                                            val = 2;
                                           });
                                         },
                                         activeColor: Color(0xffC1A4FF),
