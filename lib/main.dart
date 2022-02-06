@@ -3,6 +3,7 @@ import 'package:hackviolet/screens/ageChecker.dart';
 import 'package:hackviolet/screens/home.dart';
 import 'package:hackviolet/screens/onboarding.dart';
 import 'package:hackviolet/screens/rootPage.dart';
+import 'package:hackviolet/screens/sosMode.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -19,6 +20,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => AgeChecker());
         case '/rootPage':
           return MaterialPageRoute(builder: (context) => RootPage());
+        case '/sosMode':
+          return MaterialPageRoute(builder: (context) => SOSMode());
       }
     },
     debugShowCheckedModeBanner: false,

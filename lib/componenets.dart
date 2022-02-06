@@ -45,7 +45,7 @@ class CustomButton2 extends StatelessWidget {
           Navigator.pushNamed(context, nextPath);
         },
         child: Container(
-            width: 115,
+            width: 150,
             height: 34,
             alignment: Alignment.center,
             decoration: BoxDecoration(
