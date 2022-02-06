@@ -1,7 +1,9 @@
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 
 import 'package:flutter/material.dart';
+import 'package:hackviolet/screens/chat.dart';
 import 'package:hackviolet/screens/home.dart';
+import 'package:hackviolet/screens/profile.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({Key? key}) : super(key: key);
@@ -30,10 +32,10 @@ class _RootPageState extends State<RootPage> {
   Widget _body() => SizedBox.expand(
         child: IndexedStack(
           index: _currentIndex,
-          children: const <Widget>[
+          children: <Widget>[
             Home(),
-            Home(),
-            Home(),
+            ChatWidget(),
+            DashboardprofilechangesWidget(),
           ],
         ),
       );

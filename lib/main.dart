@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackviolet/screens/ageChecker.dart';
+import 'package:hackviolet/screens/chat.dart';
 import 'package:hackviolet/screens/home.dart';
 import 'package:hackviolet/screens/onboarding.dart';
 import 'package:hackviolet/screens/rootPage.dart';
@@ -22,6 +23,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => RootPage());
         case '/sosMode':
           return MaterialPageRoute(builder: (context) => SOSMode());
+        case '/chat':
+          return MaterialPageRoute(builder: (context) => ChatWidget());
       }
     },
     debugShowCheckedModeBanner: false,
