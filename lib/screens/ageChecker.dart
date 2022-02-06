@@ -114,7 +114,7 @@ class _AgeCheckerState extends State<AgeChecker> {
                                     height: 10,
                                   ),
                                   CustomButton2(
-                                      name: "Teens", nextPath: "/teenhome")
+                                      name: "Teens", nextPath: "/teenNavBar")
                                 ],
                               ),
                             ],

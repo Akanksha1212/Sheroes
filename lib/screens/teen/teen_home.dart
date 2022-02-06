@@ -29,7 +29,7 @@ class _TeenHomeState extends State<TeenHome> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 35,
+              height: 40,
             ),
             Text(
               "Home",
@@ -67,7 +67,7 @@ class _TeenHomeState extends State<TeenHome> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SizedBox(
-                                height: 5,
+                                height: 15,
                               ),
                               Text(
                                 "Welcome Jane",
@@ -129,17 +129,17 @@ class _TeenHomeState extends State<TeenHome> {
                         children: [
                           Image.asset(
                             "assets/fight.png",
-                            height: 150,
-                            width: 150,
+                            height: 220,
+                            width: 220,
                           ),
                           CustomButton2(
                             name: "Play",
-                            nextPath: "/home",
+                            nextPath: "/levelHome",
                           )
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 5, 20, 5),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 5),
                         child: Card(
                           child: Container(
                             height: 170,
@@ -167,7 +167,7 @@ class _TeenHomeState extends State<TeenHome> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 15,
                                 ),
                                 CustomButton2(
                                   name: "Activate",
@@ -178,76 +178,6 @@ class _TeenHomeState extends State<TeenHome> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(25, 10, 25, 15),
-                        child: Text(
-                          "Talk to other women about workplace challeges in our community board.",
-                          style: GoogleFonts.montserrat(
-                            textStyle: TextStyle(
-                                color: Color(0xff171730), fontSize: 12),
-                          ),
-                        ),
-                      ),
-                      Container(
-                          width: 195,
-                          height: 49,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(40),
-                              topRight: Radius.circular(40),
-                              bottomLeft: Radius.circular(40),
-                              bottomRight: Radius.circular(40),
-                            ),
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                          ),
-                          child: Stack(children: <Widget>[
-                            Positioned(
-                                top: 0,
-                                left: 0,
-                                child: Container(
-                                    width: 195,
-                                    height: 49,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(24.5),
-                                        topRight: Radius.circular(24.5),
-                                        bottomLeft: Radius.circular(24.5),
-                                        bottomRight: Radius.circular(24.5),
-                                      ),
-                                      color: Color.fromRGBO(255, 255, 255, 1),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(0, 0, 0, 1),
-                                        width: 1,
-                                      ),
-                                    ))),
-                            Positioned(
-                                top: 18,
-                                left: 56,
-                                child: Text(
-                                  'Sign up with Google',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(0, 0, 0, 1),
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 11,
-                                      letterSpacing:
-                                          0 /*percentages not used in flutter. defaulting to zero*/,
-                                      fontWeight: FontWeight.normal,
-                                      height: 1),
-                                )),
-                            Positioned(
-                                top: 12,
-                                left: 20,
-                                child: Container(
-                                    width: 26,
-                                    height: 25,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image:
-                                              AssetImage('assets/google.png'),
-                                          fit: BoxFit.fitWidth),
-                                    ))),
-                          ]))
                     ],
                   ),
                 ),

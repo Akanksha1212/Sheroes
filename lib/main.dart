@@ -6,9 +6,11 @@ import 'package:hackviolet/screens/child/childNavBar.dart';
 import 'package:hackviolet/screens/child/child_home.dart';
 import 'package:hackviolet/screens/child/nono.dart';
 import 'package:hackviolet/screens/child/storyTime.dart';
+import 'package:hackviolet/screens/level/levelHome.dart';
 import 'package:hackviolet/screens/onboarding.dart';
 import 'package:hackviolet/screens/rootPage.dart';
 import 'package:hackviolet/screens/sosMode.dart';
+import 'package:hackviolet/screens/teen/teenNavBar.dart';
 import 'package:hackviolet/screens/teen/teen_home.dart';
 
 void main() {
@@ -32,6 +34,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => RootPage());
         case '/childNavBar':
           return MaterialPageRoute(builder: (context) => ChildNavBar());
+        case '/teenNavBar':
+          return MaterialPageRoute(builder: (context) => TeenNavBar());
         case '/sosMode':
           return MaterialPageRoute(builder: (context) => SOSMode());
         case '/story':
@@ -40,6 +44,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => ChatWidget());
         case '/nono':
           return MaterialPageRoute(builder: (context) => NonoSqare());
+        case '/levelHome':
+          return MaterialPageRoute(builder: (context) => LevelHome());
       }
     },
     debugShowCheckedModeBanner: false,
