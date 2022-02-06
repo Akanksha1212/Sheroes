@@ -31,3 +31,33 @@ class CustomButton extends StatelessWidget {
     // Bowlby One
   }
 }
+
+class CustomButton2 extends StatelessWidget {
+  final String name;
+  final String nextPath;
+  CustomButton2({Key? key, required this.name, required this.nextPath})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, nextPath);
+        },
+        child: Container(
+            width: 115,
+            height: 34,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Color(0xffC1A4FF),
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Text(
+              name,
+              style: GoogleFonts.montserrat(
+                textStyle: TextStyle(color: Colors.white, fontSize: 15),
+              ),
+            )));
+    // Bowlby One
+  }
+}
