@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hackviolet/componenets.dart';
+import 'package:hackviolet/screens/ageChecker.dart';
 import 'package:hackviolet/screens/home.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -14,7 +16,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => Home()),
+      MaterialPageRoute(builder: (_) => AgeChecker()),
     );
   }
 
@@ -48,7 +50,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       backgroundColor: Color(0xffEEE6F3),
       body: Center(
         child: Container(
-          height: 670,
+          height: 690,
           width: 380,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -94,21 +96,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                             body:
                                 "A female center empowerment app for the young generation.",
                             image: _buildImage('on4.png'),
-                            footer: ElevatedButton(
-                              onPressed: () {
-                                introKey.currentState?.animateScroll(0);
-                              },
-                              child: const Text(
-                                'Start',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.lightBlue,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                              ),
-                            ),
+                            footer: CustomButton(
+                                name: "Start", nextPath: "/ageChecker"),
                             decoration: pageDecoration,
                           ),
                         ],
@@ -149,7 +138,16 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         ),
                       ),
                     ),
-                    Text('skip')
+                    GestureDetector(
+                      child: Text('skip'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AgeChecker()),
+                        );
+                      },
+                    )
                   ],
                 ),
               ),
