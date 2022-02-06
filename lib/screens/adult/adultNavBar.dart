@@ -1,19 +1,20 @@
 import 'package:bottom_nav_bar/bottom_nav_bar.dart';
 
 import 'package:flutter/material.dart';
+import 'package:hackviolet/screens/adult/adult_home.dart';
 import 'package:hackviolet/screens/adult/adult_profile.dart';
 import 'package:hackviolet/screens/chat.dart';
 import 'package:hackviolet/screens/adult_home.dart';
 import 'package:hackviolet/screens/child/child_home.dart';
 
-class RootPage extends StatefulWidget {
-  const RootPage({Key? key}) : super(key: key);
+class AdultNavBar extends StatefulWidget {
+  const AdultNavBar({Key? key}) : super(key: key);
 
   @override
-  _RootPageState createState() => _RootPageState();
+  _AdultNavBarState createState() => _AdultNavBarState();
 }
 
-class _RootPageState extends State<RootPage> {
+class _AdultNavBarState extends State<AdultNavBar> {
   int _currentIndex = 0;
 
   @override
@@ -34,9 +35,9 @@ class _RootPageState extends State<RootPage> {
         child: IndexedStack(
           index: _currentIndex,
           children: <Widget>[
-            ChildHome(),
+            AdultHome(),
             ChatWidget(),
-            DashboardprofilechangesWidget(),
+            AdultProfile(),
           ],
         ),
       );

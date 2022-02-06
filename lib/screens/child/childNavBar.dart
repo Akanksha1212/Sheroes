@@ -5,6 +5,7 @@ import 'package:hackviolet/screens/adult/adult_profile.dart';
 import 'package:hackviolet/screens/chat.dart';
 import 'package:hackviolet/screens/adult_home.dart';
 import 'package:hackviolet/screens/child/child_home.dart';
+import 'package:hackviolet/screens/child/child_profile.dart';
 
 class ChildNavBar extends StatefulWidget {
   const ChildNavBar({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class _ChildNavBarState extends State<ChildNavBar> {
           children: <Widget>[
             ChildHome(),
             ChatWidget(),
-            DashboardprofilechangesWidget(),
+            ChildProfile(),
           ],
         ),
       );

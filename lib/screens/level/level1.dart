@@ -6,18 +6,18 @@ import 'package:battery_info/enums/charging_status.dart';
 import 'package:battery_info/model/iso_battery_info.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hackviolet/componenets.dart';
-import 'package:hackviolet/screens/level/level1.dart';
+import 'package:hackviolet/screens/child/nono.dart';
 
 // Access current battery health - Android
 
-class LevelHome extends StatefulWidget {
-  const LevelHome({Key? key}) : super(key: key);
+class Level1 extends StatefulWidget {
+  const Level1({Key? key}) : super(key: key);
 
   @override
-  _LevelHomeState createState() => _LevelHomeState();
+  _Level1State createState() => _Level1State();
 }
 
-class _LevelHomeState extends State<LevelHome> {
+class _Level1State extends State<Level1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +33,7 @@ class _LevelHomeState extends State<LevelHome> {
               height: 40,
             ),
             Text(
-              "Self Defense Game",
+              "Level 1",
               style: GoogleFonts.montserrat(
                 textStyle: TextStyle(color: Color(0xffFFFFFF), fontSize: 18),
               ),
@@ -143,7 +143,7 @@ class _LevelHomeState extends State<LevelHome> {
                             ),
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => Level1()));
+                                  builder: (context) => NonoSqare()));
                             },
                           ),
                         ),
@@ -204,7 +204,7 @@ class _LevelHomeState extends State<LevelHome> {
                             ),
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => Level1()));
+                                  builder: (context) => NonoSqare()));
                             },
                           ),
                         ),
@@ -265,7 +265,7 @@ class _LevelHomeState extends State<LevelHome> {
                             ),
                             onTap: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => Level1()));
+                                  builder: (context) => NonoSqare()));
                             },
                           ),
                         ),

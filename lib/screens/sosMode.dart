@@ -17,6 +17,8 @@ class SOSMode extends StatefulWidget {
 }
 
 class _SOSModeState extends State<SOSMode> {
+  bool value = false;
+  int val = -1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -189,6 +191,7 @@ class _SOSModeState extends State<SOSMode> {
                           ),
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Padding(
                               padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
@@ -199,6 +202,16 @@ class _SOSModeState extends State<SOSMode> {
                                       color: Color(0xff171730), fontSize: 15),
                                 ),
                               ),
+                            ),
+                            Radio(
+                              value: 1,
+                              groupValue: val,
+                              onChanged: (value) {
+                                setState(() {
+                                  val = 0;
+                                });
+                              },
+                              activeColor: Color(0xffC1A4FF),
                             ),
                           ],
                         ),
@@ -221,16 +234,26 @@ class _SOSModeState extends State<SOSMode> {
                                       SizedBox(
                                         width: 10,
                                       ),
+                                      Radio(
+                                        value: 1,
+                                        groupValue: val,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            val = 0;
+                                          });
+                                        },
+                                        activeColor: Color(0xffC1A4FF),
+                                      ),
                                       SizedBox(
-                                        width: 300,
+                                        width: 250,
                                         child: Text(
-                                          "Send your last location to this contact whenever your battery is below 5%",
+                                          "Send your last location to this contact\n whenever your battery is below 5%",
                                           style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                                 color: Color(0xff51516F),
                                                 fontSize: 12),
                                           ),
-                                          maxLines: 3,
+                                          maxLines: 4,
                                         ),
                                       ),
                                     ],
@@ -245,7 +268,7 @@ class _SOSModeState extends State<SOSMode> {
                           child: Card(
                             child: Container(
                               height: 170,
-                              width: 400,
+                              width: 420,
                               color: Color(0xff51516F),
                               child: Padding(
                                 padding: const EdgeInsets.all(10.0),
@@ -278,10 +301,133 @@ class _SOSModeState extends State<SOSMode> {
                                     SizedBox(
                                       height: 15,
                                     ),
-                                    CustomButton2(
-                                      name: "Edit Safe Word",
-                                      nextPath: "/home",
-                                    ),
+                                    GestureDetector(
+                                      child: Container(
+                                        height: 45,
+                                        width: 150,
+                                        color: Color(0xffB4B4CF),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Text(
+                                            "Edit Safe Word",
+                                            style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 15),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      onTap: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(
+                                                              20.0))),
+                                              backgroundColor:
+                                                  Color(0xff51516F),
+                                              content: Container(
+                                                height: 250,
+                                                width: 300,
+                                                child: Column(
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 30,
+                                                    ),
+                                                    Text(
+                                                      "Edit Safe Word",
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                        textStyle: TextStyle(
+                                                            color: Colors.white,
+                                                            fontSize: 15),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width: 300,
+                                                      height: 55,
+                                                      child: TextField(
+                                                        decoration:
+                                                            InputDecoration(
+                                                                border:
+                                                                    OutlineInputBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              30.0),
+                                                                ),
+                                                                filled: true,
+                                                                hintStyle: TextStyle(
+                                                                    color: Colors
+                                                                            .grey[
+                                                                        800]),
+                                                                hintText:
+                                                                    "Safe word",
+                                                                fillColor: Colors
+                                                                    .white70),
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 20,
+                                                    ),
+                                                    Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width /
+                                                              1.2,
+                                                      height: 60,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .all(8.0),
+                                                        child: RaisedButton(
+                                                          elevation: 5,
+                                                          color:
+                                                              Color(0xffC1A4FF),
+                                                          child: Text(
+                                                            'Save',
+                                                            style: GoogleFonts
+                                                                .montserrat(
+                                                              textStyle:
+                                                                  TextStyle(
+                                                                color: Colors
+                                                                    .white,
+                                                                fontSize: 15,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onPressed: () {
+                                                            var snackBar = SnackBar(
+                                                                content: Text(
+                                                                    'Saved "Help Help Help" as your safe word'));
+                                                            ScaffoldMessenger
+                                                                    .of(context)
+                                                                .showSnackBar(
+                                                                    snackBar);
+                                                          },
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        );
+                                        // CustomButton2(
+                                        //   name: "Edit Safe Word",
+                                        //   nextPath: "/home",
+                                        // ),
+                                      },
+                                    )
                                   ],
                                 ),
                               ),
@@ -291,9 +437,37 @@ class _SOSModeState extends State<SOSMode> {
                         SizedBox(
                           height: 20,
                         ),
-                        CustomButton2(
-                          name: "Activate",
-                          nextPath: "/home",
+                        Container(
+                          width: MediaQuery.of(context).size.width / 3,
+                          height: 40,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                            color: Color(0xffC1A4FF),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                              child: Center(
+                                child: Text(
+                                  'Activate',
+                                  style: GoogleFonts.montserrat(
+                                    textStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                var snackBar = SnackBar(
+                                    content: Text('Activated S.O.S mode'));
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
+                              },
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -315,3 +489,4 @@ class _SOSModeState extends State<SOSMode> {
 //                 "Battery Health: ${(await BatteryInfoPlugin().androidBatteryInfo)!.batteryLevel}");
 //           },
 //         ),
+

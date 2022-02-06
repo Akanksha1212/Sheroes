@@ -6,9 +6,10 @@ import 'package:hackviolet/screens/child/childNavBar.dart';
 import 'package:hackviolet/screens/child/child_home.dart';
 import 'package:hackviolet/screens/child/nono.dart';
 import 'package:hackviolet/screens/child/storyTime.dart';
+import 'package:hackviolet/screens/level/level1.dart';
 import 'package:hackviolet/screens/level/levelHome.dart';
 import 'package:hackviolet/screens/onboarding.dart';
-import 'package:hackviolet/screens/rootPage.dart';
+import 'package:hackviolet/screens/adult/adultNavBar.dart';
 import 'package:hackviolet/screens/sosMode.dart';
 import 'package:hackviolet/screens/teen/teenNavBar.dart';
 import 'package:hackviolet/screens/teen/teen_home.dart';
@@ -30,8 +31,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => OnBoardingPage());
         case '/ageChecker':
           return MaterialPageRoute(builder: (context) => AgeChecker());
-        case '/rootPage':
-          return MaterialPageRoute(builder: (context) => RootPage());
+        case '/adultNavBar':
+          return MaterialPageRoute(builder: (context) => AdultNavBar());
         case '/childNavBar':
           return MaterialPageRoute(builder: (context) => ChildNavBar());
         case '/teenNavBar':
@@ -46,6 +47,8 @@ void main() {
           return MaterialPageRoute(builder: (context) => NonoSqare());
         case '/levelHome':
           return MaterialPageRoute(builder: (context) => LevelHome());
+        case '/level1':
+          return MaterialPageRoute(builder: (context) => Level1());
       }
     },
     debugShowCheckedModeBanner: false,

@@ -3,18 +3,14 @@ import 'dart:math' as math;
 import 'dart:math' as math;
 import 'dart:math' as math;
 
-class DashboardprofilechangesWidget extends StatefulWidget {
+class TeenProfile extends StatefulWidget {
   @override
-  _DashboardprofilechangesWidgetState createState() =>
-      _DashboardprofilechangesWidgetState();
+  _TeenProfileState createState() => _TeenProfileState();
 }
 
-class _DashboardprofilechangesWidgetState
-    extends State<DashboardprofilechangesWidget> {
+class _TeenProfileState extends State<TeenProfile> {
   @override
   Widget build(BuildContext context) {
-    // Figma Flutter Generator DashboardprofilechangesWidget - FRAME
-
     return Container(
         width: MediaQuery.of(context).size.width,
         height: 800,
@@ -187,7 +183,7 @@ class _DashboardprofilechangesWidgetState
               top: 374,
               left: 140,
               child: Text(
-                'Adult Profile',
+                'Teen Profile',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Color.fromRGBO(23, 23, 48, 1),
