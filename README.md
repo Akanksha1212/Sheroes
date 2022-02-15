@@ -10,3 +10,9 @@ It teaches children especially young girls to discover personal boundaries and u
 
 **Background Mode** allows users to create a "safe word" and while this mode is on, shouting your “safe word” five times will share your last location to your emergency contact.
 Also, we kept the **user's phone battery situation** in mind and added **battery tracking** as well so that the emergency contact knows the user's last location even if their phone shuts down. Not every time user will be in danger hence user gets prompt on their phone and if they don't respond to it then the location SMS is sent to the emergency contact.
+
+## Screenshots
+<pre>
+<img src="Screenshots/1.jpg" width="250"> <img src="Screenshots/2.jpg" width="250"> <img src="Screenshots/6.jpg" width="250"> <img src="Screenshots/3.jpg" width="250"> <img src="Screenshots/4.jpg" width="250"> <img src="Screenshots/10.jpg" width="250">  <img src="Screenshots/5.jpg" width="250">  <img src="Screenshots/7.jpg" width="250"> <img src="Screenshots/8.jpg" width="250"> <img src="Screenshots/9.jpg" width="250">  
+
+</pre>
